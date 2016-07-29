@@ -9,15 +9,26 @@ public class MegaDeviceActivator implements BundleActivator {
 
 	private static Logger logger = LoggerFactory
 			.getLogger(MegaDeviceActivator.class);
+	
+	private static BundleContext context;
 
 	
 	public void start(BundleContext context) throws Exception {
-		logger.info("MegaDevice binding has been started.");
+		logger.info("MegaDevice binding 0.1.2.1 has been started.");
 	}
 
 	
 	public void stop(BundleContext context) throws Exception {
-		logger.debug("MegaDevice binding has been stopped.");
+		logger.debug("MegaDevice binding 0.1.2.1 has been stopped.");
+	}
+	
+	/**
+	 * Returns the bundle context of this bundle
+	 * 
+	 * @return the bundle context
+	 */
+	public static BundleContext getContext() {
+		return context;
 	}
 
 }
